@@ -70,3 +70,8 @@ export interface TopProduct {
     product: string;
     quantity: number;
 }
+
+export interface SalesByChannel {
+    channel: string;
+    total: number;
+}

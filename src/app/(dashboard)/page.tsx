@@ -5,10 +5,12 @@ import { subMonths } from "date-fns";
 import { useSalesData } from "@/hooks/useSalesData";
 import { useMarginData } from "@/hooks/useMarginData";
 import { useTopProducts } from "@/hooks/useTopProducts";
+import { useSalesByChannel } from "@/hooks/useSalesByChannel";
 import Filters from "./components/filters/Filters";
 import SalesChart from "./components/charts/salesChart";
 import MarginChart from "./components/charts/MarginChart";
 import TopProductsChart from "./components/charts/TopProductsChart";
+import SalesByChannelChart from "./components/charts/SalesByChannelChart";
 
 
 export default function DashboardPage() {
@@ -54,14 +56,26 @@ export default function DashboardPage() {
         category,
     });
 
+    const {
+        data: salesByChannelData,
+        loading: salesByChannelLoading,
+        error: salesByChannelError,
+        refetch: refetchSalesByChannel,
+    } = useSalesByChannel({
+        dateFrom,
+        dateTo,
+        category,
+    });
+
     const handleFiltrar = () => {
         refetchSales();
         refetchMargin();
         refetchTopProducts();
+        refetchSalesByChannel();
     };
 
-    const anyLoading = salesLoading || marginLoading || topProductsLoading;
-    const anyError = salesError || marginError || topProductsError;
+    const anyLoading = salesLoading || marginLoading || topProductsLoading || salesByChannelLoading;
+    const anyError = salesError || marginError || topProductsError || salesByChannelError;
 
 
     return (
@@ -104,6 +118,15 @@ export default function DashboardPage() {
                     data={topProductsData}
                     loading={topProductsLoading}
                     error={topProductsError}
+                />
+            </div>
+
+            {/* Gráfico de dona (circular) */}
+            <div className="mb-6">
+                <SalesByChannelChart
+                    data={salesByChannelData}
+                    loading={salesByChannelLoading}
+                    error={salesByChannelError}
                 />
             </div>
 

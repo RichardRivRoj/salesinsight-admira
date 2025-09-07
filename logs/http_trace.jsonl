@@ -78,3 +78,37 @@
 {"ts":"2025-09-07T16:47:57.428Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
 {"ts":"2025-09-07T16:47:57.433Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
 {"ts":"2025-09-07T16:47:57.434Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:20.462Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:20.463Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T17:02:20.464Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:27.551Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T17:02:27.570Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:27.572Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:42.051Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:42.090Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T17:02:42.118Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:42.629Z","endpoint":"/api/sales/sales-by-channel","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:45.902Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T17:02:45.904Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:45.928Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:45.946Z","endpoint":"/api/sales/sales-by-channel","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:52.278Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T17:02:52.329Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:52.331Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:52.335Z","endpoint":"/api/sales/sales-by-channel","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:55.301Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T17:02:55.302Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:55.354Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:55.356Z","endpoint":"/api/sales/sales-by-channel","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:57.329Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:57.327Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T17:02:57.332Z","endpoint":"/api/sales/sales-by-channel","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:02:57.334Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:03:02.109Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T17:03:02.111Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:03:02.165Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:03:02.166Z","endpoint":"/api/sales/sales-by-channel","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:05:24.864Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:05:24.865Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T17:05:24.866Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T17:05:24.867Z","endpoint":"/api/sales/sales-by-channel","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
