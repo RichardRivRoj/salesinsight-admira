@@ -12,6 +12,8 @@ import MarginChart from "./components/charts/MarginChart";
 import TopProductsChart from "./components/charts/TopProductsChart";
 import SalesByChannelChart from "./components/charts/SalesByChannelChart";
 
+import LoadingSpinner from "@/components/shared/LoadingSpinner";
+
 
 export default function DashboardPage() {
     const [dateFrom, setDateFrom] = useState<Date | undefined>(
@@ -77,6 +79,16 @@ export default function DashboardPage() {
     const anyLoading = salesLoading || marginLoading || topProductsLoading || salesByChannelLoading;
     const anyError = salesError || marginError || topProductsError || salesByChannelError;
 
+    if (anyLoading) {
+        return (
+            <div className="container mx-auto p-6">
+                <div className="flex items-center justify-center h-64">
+                    <LoadingSpinner size="lg" />
+                    <span className="ml-2 text-lg">Cargando datos...</span>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="container mx-auto p-6">
@@ -94,6 +106,12 @@ export default function DashboardPage() {
                 onFilter={handleFiltrar}
             />
 
+            {anyError && (
+                <div className="bg-[#ffe4e6] border border-[#fb7185] text-[#be123c] px-4 py-3 rounded mb-6">
+                    {anyError}
+                </div>
+            )}
+
             {/* Gráfico de líneas */}
             <div className="mb-6">
                 <SalesChart
@@ -103,7 +121,20 @@ export default function DashboardPage() {
                 />
             </div>
 
-            {/* Gráfico de barras */}
+            {/* Tres gráficos en una fila con tres columnas */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <TopProductsChart
+                    data={topProductsData}
+                    loading={topProductsLoading}
+                    error={topProductsError}
+                />
+                <SalesByChannelChart
+                    data={salesByChannelData}
+                    loading={salesByChannelLoading}
+                    error={salesByChannelError}
+                />
+            </div>
+
             <div className="mb-6">
                 <MarginChart
                     data={marginData}
@@ -112,23 +143,6 @@ export default function DashboardPage() {
                 />
             </div>
 
-            {/* Gráfico de barras horizontal */}
-            <div className="mb-6">
-                <TopProductsChart
-                    data={topProductsData}
-                    loading={topProductsLoading}
-                    error={topProductsError}
-                />
-            </div>
-
-            {/* Gráfico de dona (circular) */}
-            <div className="mb-6">
-                <SalesByChannelChart
-                    data={salesByChannelData}
-                    loading={salesByChannelLoading}
-                    error={salesByChannelError}
-                />
-            </div>
 
             {salesMetadata && (
                 <div className="bg-[#ffe4e6] p-4 rounded-lg text-sm mt-6 text-[#881337]">

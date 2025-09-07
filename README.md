@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SalesInsight Pro
 
-## Getting Started
+## Estructura del Proyecto
+El proyecto está organizado en carpetas clave:
+- `src/app/api/sales/` — Endpoints de la API para ventas, margen por categoría, ventas por canal y top productos.
+- `src/app/(dashboard)/components/` — Componentes visuales para gráficos y filtros.
+- `src/components/ui/` — Componentes reutilizables de interfaz (botón, select, calendario, etc.) basados en Shadcn UI.
+- `src/hooks/` — Hooks personalizados para consumir y transformar datos de la API.
+- `data/mockData.json` — Datos simulados para desarrollo y pruebas.
+- `src/lib/` — Utilidades, constantes y lógica para envío de logs a webhook.
 
-First, run the development server:
+## Fuente/API utilizada
+Se emplean endpoints propios bajo `/api/sales` y subrutas:
+- `/api/sales` — Datos generales de ventas.
+- `/api/sales/margin-by-category` — Margen por categoría.
+- `/api/sales/sales-by-channel` — Ventas por canal.
+- `/api/sales/top-products` — Productos más vendidos.
+Todos los endpoints consumen datos simulados desde `data/mockData.json`.
 
+## Cómo correr el proyecto
+Instala dependencias y ejecuta el servidor de desarrollo:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm i && npm run dev
 ```
+Accede a la app en [http://localhost:3000](http://localhost:3000).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Variables de entorno utilizadas
+- `WEBHOOK_URL`: URL para el envío de logs de actividad mediante el archivo.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Transformaciones implementadas
+Las transformaciones principales en los endpoints y hooks incluyen:
+- **Agregación temporal**: Agrupación de ventas por mes para mostrar tendencias.
+- **Agrupación y suma**: Suma de ventas por canal y por categoría.
+- **Cálculo de margen**: Margen = (Ventas - Costo) / Ventas, calculado por categoría.
+- **Ranking de productos**: Ordenación de productos por cantidad vendida para mostrar el top.
+Estas transformaciones se realizan en los endpoints y se consumen mediante hooks en los componentes de gráficos.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Decisiones de diseño y trade-offs
+- **Next.js App Router**: Estructura modular y escalable para el dashboard y la API.
+- **Componentes desacoplados y reutilizables**: Facilitan la extensión y el mantenimiento.
+- **Mocks de datos**: Permiten desarrollo con backend ligero, acelerando pruebas y prototipado.
+- **Shadcn UI**: Implementación rápida de componentes visuales y estilos modernos.
+- **Uso de Webhook**: Permite registrar actividad relevante del sistema.
+- **Trade-off**: Acelera el desarrollo y pruebas.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Declaración de uso de IA
+Se utilizó IA (GitHub Copilot) para la generación rápida de estilos (con Tailwind), componentes visuales (Ej. Los componentes del directorio `src/components/shared/`) y la estructura de datos mock, optimizando el tiempo de desarrollo en la interfaz de usuario.

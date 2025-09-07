@@ -2,6 +2,9 @@
 
 import { SimpleBarChart } from "@/components/charts/bar-chart";
 import { MarginByCategory } from "@/types";
+import ErrorAlert from "@/components/shared/ErrorAlert";
+import ChartSkeleton from "@/components/shared/ChartSkeleton";
+import ChartEmptyState from "./ChartEmpetyState";
 
 interface MarginChartProps {
     data: MarginByCategory[];
@@ -14,6 +17,14 @@ export default function MarginChart({
     loading = false,
     error = null,
 }: MarginChartProps) {
+    if (loading) return <ChartSkeleton className="col-span-1 lg:col-span-2" />;
+
+    if (error)
+        return (
+            <div className="col-span-1 lg:col-span-2">
+                <ErrorAlert message={error} />
+            </div>
+        );
 
     return (
         <div className="bg-white p-4 rounded-lg shadow-md mb-6">
@@ -24,7 +35,7 @@ export default function MarginChart({
                 <SimpleBarChart data={data} />
             ) : (
                 <div className="text-center py-8">
-                    <p>Prueba</p>
+                    <ChartEmptyState chartType="margin" />
                 </div>
             )}
         </div>

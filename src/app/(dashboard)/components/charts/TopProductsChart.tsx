@@ -2,6 +2,9 @@
 
 import { SimpleHorizontalBarChart } from "@/components/charts/horizontal-bar-chart";
 import { TopProduct } from "@/types";
+import ErrorAlert from "@/components/shared/ErrorAlert";
+import ChartSkeleton from "@/components/shared/ChartSkeleton";
+import ChartEmptyState from "./ChartEmpetyState";
 
 interface TopProductsChartProps {
     data: TopProduct[];
@@ -14,6 +17,14 @@ export default function TopProductsChart({
     loading = false,
     error = null,
 }: TopProductsChartProps) {
+    if (loading) return <ChartSkeleton className="col-span-1 lg:col-span-2" />;
+
+    if (error)
+        return (
+            <div className="col-span-1 lg:col-span-2">
+                <ErrorAlert message={error} />
+            </div>
+        );
 
     return (
         <div className="bg-white p-4 rounded-lg shadow-md mb-6">
@@ -24,7 +35,7 @@ export default function TopProductsChart({
                 <SimpleHorizontalBarChart data={data} />
             ) : (
                 <div className="text-center py-8">
-                    <p>Prueba</p>
+                    <ChartEmptyState chartType="products" />
                 </div>
             )}
         </div>
