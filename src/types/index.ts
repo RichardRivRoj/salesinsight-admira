@@ -52,3 +52,16 @@ export interface LogEntry {
   message?: string;
   error?: string;
 }
+
+export interface MarginByCategory {
+    category: string;
+    margin: number;
+}
+
+export interface Metadata {
+    total_records: number;
+    date_range: {
+        min: string;
+        max: string;
+    };
+}

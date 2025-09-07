@@ -3,8 +3,10 @@
 import { useState } from "react";
 import { subMonths } from "date-fns";
 import { useSalesData } from "@/hooks/useSalesData";
+import { useMarginData } from "@/hooks/useMarginData";
 import Filters from "./components/filters/Filters";
 import SalesChart from "./components/charts/salesChart";
+import MarginChart from "./components/charts/MarginChart";
 
 
 export default function DashboardPage() {
@@ -28,14 +30,24 @@ export default function DashboardPage() {
         category,
     });
 
-    
+    const {
+        data: marginData,
+        loading: marginLoading,
+        error: marginError,
+        refetch: refetchMargin,
+    } = useMarginData({
+        dateFrom,
+        dateTo,
+        category,
+    });
 
     const handleFiltrar = () => {
         refetchSales();
+        refetchMargin();
     };
 
-    const anyLoading = salesLoading;
-    const anyError = salesError;
+    const anyLoading = salesLoading || marginLoading;
+    const anyError = salesError || marginError;
 
 
     return (
@@ -63,7 +75,14 @@ export default function DashboardPage() {
                 />
             </div>
 
-
+            {/* Gráfico de barras */}
+            <div className="mb-6">
+                <MarginChart
+                    data={marginData}
+                    loading={marginLoading}
+                    error={marginError}
+                />
+            </div>
 
             {salesMetadata && (
                 <div className="bg-[#ffe4e6] p-4 rounded-lg text-sm mt-6 text-[#881337]">
