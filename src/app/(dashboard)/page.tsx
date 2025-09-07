@@ -4,9 +4,11 @@ import { useState } from "react";
 import { subMonths } from "date-fns";
 import { useSalesData } from "@/hooks/useSalesData";
 import { useMarginData } from "@/hooks/useMarginData";
+import { useTopProducts } from "@/hooks/useTopProducts";
 import Filters from "./components/filters/Filters";
 import SalesChart from "./components/charts/salesChart";
 import MarginChart from "./components/charts/MarginChart";
+import TopProductsChart from "./components/charts/TopProductsChart";
 
 
 export default function DashboardPage() {
@@ -41,13 +43,25 @@ export default function DashboardPage() {
         category,
     });
 
+    const {
+        data: topProductsData,
+        loading: topProductsLoading,
+        error: topProductsError,
+        refetch: refetchTopProducts,
+    } = useTopProducts({
+        dateFrom,
+        dateTo,
+        category,
+    });
+
     const handleFiltrar = () => {
         refetchSales();
         refetchMargin();
+        refetchTopProducts();
     };
 
-    const anyLoading = salesLoading || marginLoading;
-    const anyError = salesError || marginError;
+    const anyLoading = salesLoading || marginLoading || topProductsLoading;
+    const anyError = salesError || marginError || topProductsError;
 
 
     return (
@@ -81,6 +95,15 @@ export default function DashboardPage() {
                     data={marginData}
                     loading={marginLoading}
                     error={marginError}
+                />
+            </div>
+
+            {/* Gráfico de barras horizontal */}
+            <div className="mb-6">
+                <TopProductsChart
+                    data={topProductsData}
+                    loading={topProductsLoading}
+                    error={topProductsError}
                 />
             </div>
 

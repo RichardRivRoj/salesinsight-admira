@@ -65,3 +65,8 @@ export interface Metadata {
         max: string;
     };
 }
+
+export interface TopProduct {
+    product: string;
+    quantity: number;
+}

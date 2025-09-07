@@ -50,3 +50,31 @@
 {"ts":"2025-09-07T16:35:40.104Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-02-10","endDate":"2023-12-31","category":null},"status":200,"total_records":45}
 {"ts":"2025-09-07T16:37:35.868Z","endpoint":"/api/sales","parameters":{"startDate":"2023-02-10","endDate":"2023-12-31","category":"Calzado"},"status":200,"total_records":10,"message":"Datos de ventas obtenidos y transformados exitosamente"}
 {"ts":"2025-09-07T16:37:35.869Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-02-10","endDate":"2023-12-31","category":"Calzado"},"status":200,"total_records":10}
+{"ts":"2025-09-07T16:46:41.100Z","endpoint":"/api/sales","parameters":{"startDate":"2023-02-10","endDate":"2023-12-31","category":"Calzado"},"status":200,"total_records":10,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T16:46:41.101Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-02-10","endDate":"2023-12-31","category":"Calzado"},"status":200,"total_records":10}
+{"ts":"2025-09-07T16:46:49.147Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-02-10","endDate":"2023-12-31","category":"Calzado"},"status":200,"total_records":10}
+{"ts":"2025-09-07T16:46:49.147Z","endpoint":"/api/sales","parameters":{"startDate":"2023-02-10","endDate":"2023-12-31","category":"Calzado"},"status":200,"total_records":10,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T16:46:58.696Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T16:46:58.699Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T16:46:59.032Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T16:47:00.985Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T16:47:00.986Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T16:47:00.988Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T16:47:05.551Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T16:47:05.552Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T16:47:05.553Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T16:47:07.010Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T16:47:07.009Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T16:47:07.012Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T16:47:13.652Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T16:47:13.653Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T16:47:13.654Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T16:47:17.326Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T16:47:17.327Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T16:47:17.329Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T16:47:33.960Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T16:47:33.970Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T16:47:33.975Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T16:47:57.428Z","endpoint":"/api/sales","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50,"message":"Datos de ventas obtenidos y transformados exitosamente"}
+{"ts":"2025-09-07T16:47:57.433Z","endpoint":"/api/sales/top-products","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
+{"ts":"2025-09-07T16:47:57.434Z","endpoint":"/api/sales/margin-by-category","parameters":{"startDate":"2023-01-01","endDate":"2023-12-31","category":null},"status":200,"total_records":50}
