@@ -22,7 +22,7 @@ Instala dependencias y ejecuta el servidor de desarrollo:
 ```bash
 npm i && npm run dev
 ```
-Accede a la app en [http://localhost:3000](http://localhost:3000).
+Accede a la app en [http://localhost:3000](http://localhost:3000) o desplegada [https://salesinsight-admira-ei47ec7wx-richard-riveras-projects.vercel.app/](https://salesinsight-admira-ei47ec7wx-richard-riveras-projects.vercel.app/).
 
 ## Variables de entorno utilizadas
 - `WEBHOOK_URL`: URL para el envío de logs de actividad mediante el archivo.
